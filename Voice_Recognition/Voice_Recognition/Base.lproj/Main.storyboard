@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eDZ-na-4re">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voice-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Voice_Recognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBw-T0-VXg">
+                                <rect key="frame" x="99.5" y="588" width="163" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="탭을 누르시면 목소리 자막이 나옵니다." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-As-JdD">
+                                <rect key="frame" x="16" y="84" width="343" height="382"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="382" id="8ew-hF-VYO"/>
+                                    <constraint firstAttribute="width" constant="343" id="kVp-Tm-0k1"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-a0-sQQ" customClass="CircleButton" customModule="Voice_Recognition" customModuleProvider="target">
+                                <rect key="frame" x="146" y="481" width="80" height="80"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZQf-aT-EzS"/>
+                                    <constraint firstAttribute="width" constant="80" id="xbm-CL-XoK"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYQ-Xt-rLr"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bHR-Xi-lKa">
+                                <rect key="frame" x="157" y="494" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="8Zb-EB-ffo"/>
+                                    <constraint firstAttribute="height" constant="60" id="SGC-64-JKt"/>
+                                </constraints>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bHR-Xi-lKa" firstAttribute="centerY" secondItem="ekb-a0-sQQ" secondAttribute="centerY" constant="3" id="5e8-01-f2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ekb-a0-sQQ" secondAttribute="trailing" constant="133" id="9uP-1D-hu1"/>
+                            <constraint firstItem="ZBw-T0-VXg" firstAttribute="top" secondItem="ekb-a0-sQQ" secondAttribute="bottom" constant="27" id="EbF-jT-KHv"/>
+                            <constraint firstItem="ZBw-T0-VXg" firstAttribute="centerX" secondItem="ekb-a0-sQQ" secondAttribute="centerX" constant="-5" id="Ggg-si-RMz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bHR-Xi-lKa" secondAttribute="trailing" constant="142" id="HA8-y0-ZuW"/>
+                            <constraint firstItem="bHR-Xi-lKa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="430" id="K84-vY-oPe"/>
+                            <constraint firstItem="ekb-a0-sQQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="417" id="Pdc-xM-P7e"/>
+                            <constraint firstItem="bHR-Xi-lKa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="R9P-MT-lqp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XvC-As-JdD" secondAttribute="leading" id="bQd-vt-j1d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XvC-As-JdD" secondAttribute="trailing" id="fZ4-8h-wYF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZBw-T0-VXg" secondAttribute="bottom" constant="41" id="nF7-cY-Sl5"/>
+                            <constraint firstItem="ekb-a0-sQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="uYM-Kn-lYh"/>
+                            <constraint firstItem="XvC-As-JdD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="zmt-PA-LnZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Voice" id="dXT-B7-rDD"/>
+                    <connections>
+                        <outlet property="activitySpinner" destination="bHR-Xi-lKa" id="q2F-fg-UYH"/>
+                        <outlet property="textField" destination="XvC-As-JdD" id="rd2-Rb-ESp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="-475.41229385307349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n7v-pS-Jl2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eDZ-na-4re" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tOB-GY-UvG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j42-RK-ItB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf3-22-ggf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-475"/>
+        </scene>
+    </scenes>
+</document>
